@@ -5,8 +5,10 @@ use fmt;
 use strings;
 use os;
 use time;
+use getopt;
 
 export fn main() void = {
+	//TODO: const cmd = getopt::parse(os::args, )
 	const dest_stat = match(os::stat(os::args[len(os::args)-1])) {
 	case let fstat: fs::filestat =>
 		yield fstat;
